@@ -1,0 +1,255 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------------------*/
+html {
+	scroll-behavior: smooth;
+	font-family: 'Times New Roman',sans-serif;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+body {
+	width: 100%;
+}
+
+.header-container {
+	padding: 50px 15% 0 15%;
+	box-sizing: border-box;
+}
+
+.header-container h1 {
+	font-size: 3.5rem;
+	display: inline-block;
+}
+
+.header-container-rigth {
+	display: flex;
+	float: right;
+}
+
+.header-container-rigth > nav > ul {
+	display: flex;
+	line-height: 3rem;
+}
+
+.header-container-rigth > nav > ul > li {
+	float: left;
+	font-size: 1.3rem;
+	margin-right: 50px;
+}
+
+.header-container-rigth li:nth-child(2) {
+	position: relative;
+	cursor: default;
+}
+
+.item-hover {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
+.item-hover::after {
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #333;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+  }
+.item-hover:hover::after {
+	bottom: 5px;
+	opacity: 1;
+	visibility: visible;
+}
+  
+.hide-item {
+	position: absolute;
+	display: none;
+	top: 40px;
+	left: -31px;
+}
+
+.hide-item a{
+	display: inline-block;
+	font-size: 1rem;
+	padding: 0px 30px;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(220, 220, 220);
+}
+
+
+.header-container-rigth input {
+	width: 230px;
+	height: 40px;
+	border-radius: 20px;
+	outline:0;
+	float: right;
+}
+
+.header-top img {
+	margin-top: 50px;
+	width: 100%;
+	height: 450px;
+	object-fit: cover;
+}
+
+main {
+	margin: 100px 0;
+}
+
+.section-title {
+	font-size: 2.5rem;
+	letter-spacing: 5px;
+	text-align: center;
+	margin: 100px 0;
+}
+
+.item-container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.item1-item {
+	width: 100%;
+	margin: 100px 0;
+	display: flex;
+}
+
+.item1-item-left {
+	width: 20%;
+}
+
+.item1-item-left p{
+	font-family: 'Sitka Subheading',sans-serif;
+	line-height: 100px;
+}
+
+.item1-item-rigth {
+	width: 80%;
+}
+
+.item1-item-rigth a {
+	display: inline-block;
+	font-size: 2.3rem;
+	margin-bottom: 20px;
+}
+
+.item1-item-rigth a:hover {
+	opacity: 0.7;
+}
+
+.button-cotainer {
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	padding: 15px 90px;
+	font-size: 1.5rem;
+	border: solid 1px black;
+	transition: all .3s;
+}
+
+.button:hover {
+	background-color: black;
+	color: white;
+}
+
+.item2-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 70px;
+}
+
+.item2-item {
+	display: inline-block;
+	width: calc(100% / 3 - 4%);
+	padding: 1%;
+	margin: 2% 0;
+	box-sizing: border-box;
+	border: solid 1px rgb(100, 100, 100);
+	border-radius: 3px;
+	transition: all .5s;
+	transform: translateY(0);
+}
+
+.item2-item:hover {
+	transform: translateY(-10px);
+	box-shadow: rgb(163, 163, 163) 0px 8px 10px;
+}
+
+.item2-item img{
+	display: inline-block;
+	width: 100%;
+	padding-bottom: 5%;
+}
+
+.item2-item p {
+	font-size: 0.8rem;
+}
+
+footer {
+	width: 100%;
+	height: 100px;
+	background-color: rgb(97, 97, 97);
+	position: relative;
+}
+
+footer p{
+	font-size: 0.8rem;
+	color: rgb(20, 20, 20);
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+}
